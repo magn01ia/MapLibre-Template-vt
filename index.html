@@ -14,40 +14,43 @@ body { margin: 0; padding: 0; }
 <body>
 <div id="map"></div>
 <script>
-//ベースマップ
 var map = new maplibregl.Map({
     container: 'map',
-    style: 'https://gsi-cyberjapan.github.io/gsivectortile-mapbox-gl-js/pale.json', // style URL
-    center: [140.084556, 36.104611], // starting position [lng, lat]
-    zoom: 7, // starting zoom
-    maxZoom: 4, // min zoom
-    maxZoom: 17 // max zoom
-    });  
-    map.on('load', function () {
-    
-//表示させたいベクトルタイル
-    map.addSource("mito", {
-        type: "vector",
-        tiles: 
-            'https://magn01ia.github.io/fudevt/mito/xyz/{z}/{x}/{y}.pbf',
-		//style: 'https://magn01ia.github.io/fudevt/mito/style.json'
-        minzoom: 10,
-        maxzoom: 16, //ここでソースのズームレベルを指定してやらないとオーバーズーミングが効かないので注意。
-    });
-    // map.addLayer({
-    //     id: "fude",
-    //     type: "fill",
-    //     source: "mito",
-    //     "source-layer": "mito",
-    //     "minzoom": 9,
-    //     "maxzoom": 22,
-    //     paint: {
-    //         "fill-color": "#FF00FF",
-    //         "fill-opacity": 0.3,
-    //         "fill-outline-color": "white"
-    //     }
-    // });
+    style: 'https://magn01ia.github.io/fude-vt/zxy/mito/style.json',
+    center: [140.084556, 36.104611], 
+    zoom: 7, 
+    maxZoom: 4, 
+    maxZoom: 16 
 });
+//ベースマップ
+// var map = new maplibregl.Map({
+//     container: 'map',
+//     style: 'https://gsi-cyberjapan.github.io/gsivectortile-mapbox-gl-js/pale.json',
+//     center: [140.084556, 36.104611], 
+//     zoom: 7, 
+//     maxZoom: 4, 
+//     maxZoom: 17 
+// });
+
+// map.on('load', function () {
+// map.addSource('mito', {
+// type: 'vector',
+// url:
+// 'https://magn01ia.github.io/fude-vt/zxy/mito/style.json'
+// });
+
+//     map.on('load', function () {
+    
+// //表示させたいベクトルタイル
+//     map.addSource("mito", {
+//         type: "vector",
+//         tiles: 
+//             'https://magn01ia.github.io/fude-vt/zxy/mito/style.json',
+//         minzoom: 1,
+//         maxzoom: 16, //ここでソースのズームレベルを指定してやらないとオーバーズーミングが効かないので注意。
+//     });
+    
+// });
 
 map.addControl(new maplibregl.FullscreenControl());
 </script>
