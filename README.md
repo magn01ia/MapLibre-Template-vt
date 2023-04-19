@@ -1,2 +1,2 @@
-# MapLibre-Template-VT
+# MapLibre-Template-vt
 MapLibreでベクトルタイルを表示させるときの簡単なテンプレ
