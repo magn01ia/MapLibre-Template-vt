@@ -22,36 +22,6 @@ var map = new maplibregl.Map({
     maxZoom: 4, 
     maxZoom: 16 
 });
-//ベースマップ
-// var map = new maplibregl.Map({
-//     container: 'map',
-//     style: 'https://gsi-cyberjapan.github.io/gsivectortile-mapbox-gl-js/pale.json',
-//     center: [140.084556, 36.104611], 
-//     zoom: 7, 
-//     maxZoom: 4, 
-//     maxZoom: 17 
-// });
-
-// map.on('load', function () {
-// map.addSource('mito', {
-// type: 'vector',
-// url:
-// 'https://magn01ia.github.io/fude-vt/zxy/mito/style.json'
-// });
-
-//     map.on('load', function () {
-    
-// //表示させたいベクトルタイル
-//     map.addSource("mito", {
-//         type: "vector",
-//         tiles: 
-//             'https://magn01ia.github.io/fude-vt/zxy/mito/style.json',
-//         minzoom: 1,
-//         maxzoom: 16, //ここでソースのズームレベルを指定してやらないとオーバーズーミングが効かないので注意。
-//     });
-    
-// });
-
 map.addControl(new maplibregl.FullscreenControl());
 </script>
 </body>
